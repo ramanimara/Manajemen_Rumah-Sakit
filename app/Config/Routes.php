@@ -13,21 +13,44 @@ $routes->post('/login/auth', 'Auth::loginProcess');
 $routes->get('/logout', 'Auth::logout');
 
 $routes->group('admin', ['filter' => 'auth'], function ($routes) {
-    $routes->get('users', 'Admin\Users::index');
+
+    $routes->get('/', 'Admin\Admin::index');
+    $routes->get('dashboard', 'Admin\Admin::index');
+
+    $routes->get('pendaftaran', 'Admin\Admin::pendaftaran');
+    $routes->get('pendaftaran/edit/(:num)', 'Admin\Admin::edit_pendaftaran/$1');
+    $routes->post('pendaftaran/update/(:num)', 'Admin\Admin::update_pendaftaran/$1');
+
+    $routes->get('kedatangan', 'Admin\Kedatangan::index');
+    $routes->post('kedatangan/confirm/(:num)', 'Admin\Kedatangan::confirm/$1');
+
+    $routes->post('antrian/next/(:num)', 'Admin\Antrian::next/$1');
+    $routes->get('antrian', 'Admin\Antrian::index');
+    $routes->get('antrian/print', 'Admin\Antrian::print');
+    $routes->get('antrian/export', 'Admin\Antrian::export');
+
+    $routes->get('hasil-pemeriksaan', 'Admin\HasilPemeriksaan::index');
+    $routes->get('hasil-pemeriksaan', 'Admin\HasilPemeriksaan::index');
+    $routes->get('hasil-pemeriksaan/export', 'Admin\HasilPemeriksaan::export');
+    $routes->get('hasil-pemeriksaan/print', 'Admin\HasilPemeriksaan::print');
+
+    $routes->get('laporan-pembayaran', 'Admin\Laporan::pembayaran');
+    $routes->get('laporan-pembayaran/export', 'Admin\Laporan::exportExcel');
+
+    $routes->get('laporan/pengambilan-obat', 'Admin\Laporan::pengambilanObat');
+    $routes->get('laporan/pengambilan-obat/print', 'Admin\Laporan::printPengambilanObat');
+    $routes->get('laporan/pengambilan-obat/excel', 'Admin\Laporan::exportPengambilanObat');
+
+    $routes->get('users/delete/(:num)', 'Admin\Users::delete/$1');
+
     $routes->get('users/create', 'Admin\Users::create');
     $routes->post('users/store', 'Admin\Users::store');
     $routes->get('users/edit/(:num)', 'Admin\Users::edit/$1');
     $routes->post('users/update/(:num)', 'Admin\Users::update/$1');
     $routes->get('users/delete/(:num)', 'Admin\Users::delete/$1');
-    $routes->get('/', 'Admin\Admin::index');
-    $routes->get('dashboard', 'Admin\Admin::index');
-    $routes->get('pendaftaran', 'Admin\Admin::pendaftaran');
-    $routes->get('users', 'Admin\Admin::users');
-    $routes->get('pendaftaran/edit/(:num)', 'Admin\Admin::edit_pendaftaran/$1');
-    $routes->post('pendaftaran/update/(:num)', 'Admin\Admin::update_pendaftaran/$1');
-    $routes->get('kedatangan', 'Admin\Kedatangan::index');
-    $routes->get('kedatangan/konfirmasi/(:num)', 'Admin\Kedatangan::konfirmasi/$1');
+    $routes->get('users', 'Admin\Users::index');
 });
+
 
 $routes->group('apoteker', ['filter' => 'auth'], function ($routes) {
     $routes->get('/', 'Apoteker\Apoteker::index');

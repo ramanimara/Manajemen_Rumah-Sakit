@@ -74,9 +74,22 @@
 
 <body>
 
-    <div class="header">
+    <div class="header" style="display:flex; justify-content:space-between; align-items:center;">
         <h2>Dashboard Apoteker</h2>
+
+        <div>
+            <span style="margin-right:15px;">
+                <?= session()->get('full_name'); ?>
+            </span>
+
+            <a href="<?= base_url('logout') ?>"
+                onclick="return confirm('Yakin ingin logout?')"
+                style="background:#dc3545; padding:6px 12px; border-radius:5px; color:white; text-decoration:none;">
+                Logout
+            </a>
+        </div>
     </div>
+
 
     <div class="container">
 

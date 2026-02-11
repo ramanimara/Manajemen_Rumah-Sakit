@@ -191,7 +191,18 @@ class Users extends BaseController
     // 6. DELETE: Hapus user
     public function delete($id)
     {
+        $db = \Config\Database::connect();
+        $db->transStart();
+
+        // Hapus data dokter dulu jika user adalah dokter
+        $this->doctorModel->where('user_id', $id)->delete();
+
+        // Baru hapus user
         $this->userModel->delete($id);
-        return redirect()->to('/admin/users')->with('success', 'User berhasil dihapus');
+
+        $db->transComplete();
+
+        return redirect()->to('/admin/users')
+            ->with('success', 'User berhasil dihapus');
     }
 }

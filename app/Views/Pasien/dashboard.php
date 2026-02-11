@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Dashboard Pasien</title>
     <style>
-        /* CSS Tema Rumah Sakit */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f0f4f8;
@@ -21,14 +20,18 @@
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             text-align: center;
-            width: 350px;
+            width: 380px;
         }
 
         h2 {
             color: #2c3e50;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            margin-bottom: 5px;
+        }
+
+        .welcome {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
         }
 
         .menu-link {
@@ -44,9 +47,8 @@
         }
 
         .menu-link:hover {
-            background-color: #2980b9;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
         .menu-link.booking { background-color: #27ae60; }
@@ -54,6 +56,14 @@
 
         .menu-link.antrian { background-color: #8e44ad; }
         .menu-link.antrian:hover { background-color: #732d91; }
+
+        .menu-link.logout {
+            background-color: #e74c3c;
+        }
+
+        .menu-link.logout:hover {
+            background-color: #c0392b;
+        }
 
         .footer-text {
             margin-top: 25px;
@@ -65,8 +75,12 @@
 <body>
 
 <div class="dashboard-container">
+
     <h2>🏥 Dashboard Pasien</h2>
-    
+    <div class="welcome">
+        Selamat datang, <strong><?= session()->get('full_name'); ?></strong>
+    </div>
+
     <a href="<?= base_url('pasien/booking') ?>" class="menu-link booking">
         ➕ Booking Periksa Baru
     </a>
@@ -79,9 +93,14 @@
         ⏱️ Monitor Antrian
     </a>
 
+    <a href="<?= base_url('logout') ?>" class="menu-link logout">
+        🚪 Logout
+    </a>
+
     <div class="footer-text">
         Sistem Informasi Manajemen Rumah Sakit &copy; 2026
     </div>
+
 </div>
 
 </body>

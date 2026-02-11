@@ -570,3 +570,813 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-11 06:33:53 --> mysqli_sql_exception: Table 'rs.pasien' doesn't exist in C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit\app\Controllers\Admin\kedatangan.php(14): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-02-11 06:33:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'rs.pasien' doesn't exist
+[Method: GET, Route: admin/kedatangan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Admin\kedatangan.php(14): CodeIgniter\Database\BaseConnection->query('
+            SELECT a.id_appointment, p.nama_pasien, pol.nama_poli, a.status
+            FROM appointments a
+            JOIN pasien p ON a.id_pasien = p.id_pasien
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-11 06:33:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'rs.pasien' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT a.id_appointment, p.nama_pasien, pol.nama_poli, a.status
+            FROM appointments a
+            JOIN pasien p ON a.id_pasien = p.id_pasien
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT a.id_appointment, p.nama_pasien, pol.nama_poli, a.status
+            FROM appointments a
+            JOIN pasien p ON a.id_pasien = p.id_pasien
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 3 APPPATH\Controllers\Admin\kedatangan.php(14): CodeIgniter\Database\BaseConnection->query('
+            SELECT a.id_appointment, p.nama_pasien, pol.nama_poli, a.status
+            FROM appointments a
+            JOIN pasien p ON a.id_pasien = p.id_pasien
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-11 06:33:53 --> [Caused by] mysqli_sql_exception: Table 'rs.pasien' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT a.id_appointment, p.nama_pasien, pol.nama_poli, a.status
+            FROM appointments a
+            JOIN pasien p ON a.id_pasien = p.id_pasien
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT a.id_appointment, p.nama_pasien, pol.nama_poli, a.status
+            FROM appointments a
+            JOIN pasien p ON a.id_pasien = p.id_pasien
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT a.id_appointment, p.nama_pasien, pol.nama_poli, a.status
+            FROM appointments a
+            JOIN pasien p ON a.id_pasien = p.id_pasien
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 4 APPPATH\Controllers\Admin\kedatangan.php(14): CodeIgniter\Database\BaseConnection->query('
+            SELECT a.id_appointment, p.nama_pasien, pol.nama_poli, a.status
+            FROM appointments a
+            JOIN pasien p ON a.id_pasien = p.id_pasien
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-11 06:35:15 --> mysqli_sql_exception: Table 'rs.poli' doesn't exist in C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit\app\Controllers\Admin\kedatangan.php(14): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-02-11 06:35:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'rs.poli' doesn't exist
+[Method: GET, Route: admin/kedatangan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Admin\kedatangan.php(14): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_appointment,
+                u.full_name AS nama_pasien,
+                pol.nama_poli,
+                a.status
+            FROM appointments a
+            JOIN patients p ON a.patient_id = p.patient_id
+            JOIN users u ON p.user_id = u.user_id
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-11 06:35:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'rs.poli' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_appointment,
+                u.full_name AS nama_pasien,
+                pol.nama_poli,
+                a.status
+            FROM appointments a
+            JOIN patients p ON a.patient_id = p.patient_id
+            JOIN users u ON p.user_id = u.user_id
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_appointment,
+                u.full_name AS nama_pasien,
+                pol.nama_poli,
+                a.status
+            FROM appointments a
+            JOIN patients p ON a.patient_id = p.patient_id
+            JOIN users u ON p.user_id = u.user_id
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 3 APPPATH\Controllers\Admin\kedatangan.php(14): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_appointment,
+                u.full_name AS nama_pasien,
+                pol.nama_poli,
+                a.status
+            FROM appointments a
+            JOIN patients p ON a.patient_id = p.patient_id
+            JOIN users u ON p.user_id = u.user_id
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-11 06:35:15 --> [Caused by] mysqli_sql_exception: Table 'rs.poli' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_appointment,
+                u.full_name AS nama_pasien,
+                pol.nama_poli,
+                a.status
+            FROM appointments a
+            JOIN patients p ON a.patient_id = p.patient_id
+            JOIN users u ON p.user_id = u.user_id
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_appointment,
+                u.full_name AS nama_pasien,
+                pol.nama_poli,
+                a.status
+            FROM appointments a
+            JOIN patients p ON a.patient_id = p.patient_id
+            JOIN users u ON p.user_id = u.user_id
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_appointment,
+                u.full_name AS nama_pasien,
+                pol.nama_poli,
+                a.status
+            FROM appointments a
+            JOIN patients p ON a.patient_id = p.patient_id
+            JOIN users u ON p.user_id = u.user_id
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 4 APPPATH\Controllers\Admin\kedatangan.php(14): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_appointment,
+                u.full_name AS nama_pasien,
+                pol.nama_poli,
+                a.status
+            FROM appointments a
+            JOIN patients p ON a.patient_id = p.patient_id
+            JOIN users u ON p.user_id = u.user_id
+            JOIN poli pol ON a.id_poli = pol.id_poli
+            WHERE a.status IN (\'registered\',\'arrived\')
+            ORDER BY a.created_at ASC
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 06:40:22 --> ErrorException: Undefined variable $pasien
+[Method: GET, Route: admin/kedatangan]
+in APPPATH\Views\Admin\kedatangan.php on line 19.
+ 1 APPPATH\Views\Admin\kedatangan.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pasien', 'C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\app\\Views\\Admin\\kedatangan.php', 19)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\app\\Views\\Admin\\kedatangan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/kedatangan', [], true)
+ 5 APPPATH\Controllers\Admin\kedatangan.php(31): view('admin/kedatangan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 06:44:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/admin.php"
+[Method: GET, Route: admin/kedatangan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/admin.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/admin', [], true)
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/kedatangan', [], true)
+ 4 APPPATH\Controllers\Admin\kedatangan.php(31): view('admin/kedatangan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 06:46:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/admin/main.php"
+[Method: GET, Route: admin/kedatangan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/admin/main.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/admin/main', [], true)
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/kedatangan', [], true)
+ 4 APPPATH\Controllers\Admin\kedatangan.php(31): view('admin/kedatangan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 06:46:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+[Method: GET, Route: admin/kedatangan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/kedatangan', [], true)
+ 4 APPPATH\Controllers\Admin\kedatangan.php(31): view('admin/kedatangan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 06:47:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+[Method: GET, Route: admin/kedatangan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/kedatangan', [], true)
+ 4 APPPATH\Controllers\Admin\kedatangan.php(31): view('admin/kedatangan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 06:50:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+[Method: GET, Route: admin/kedatangan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/kedatangan', [], true)
+ 4 APPPATH\Controllers\Admin\kedatangan.php(31): view('admin/kedatangan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Kedatangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kedatangan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-11 06:53:20 --> mysqli_sql_exception: Unknown column 'a.queue_number' in 'field list' in C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `a`.`app...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`app...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`app...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`app...', Array, false)
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit\app\Controllers\Admin\antrian.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Admin\Antrian->index()
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Antrian))
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2026-02-11 06:53:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.queue_number' in 'field list'
+[Method: GET, Route: admin/antrian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`appointment_id`, `u`.`full_name` AS `patient_name`, `d`.`name` AS `department_name`, `a`.`queue_number`, `a`.`status`
+FROM `appointments` `a`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `departments` `d` ON `d`.`department_id` = `a`.`department_id`
+WHERE `a`.`status` = :a.status:
+ORDER BY `a`.`queue_number` ASC', [...], false)
+ 2 APPPATH\Controllers\Admin\antrian.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Antrian->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Antrian))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-11 06:53:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.queue_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`appointment_id`, `u`.`full_name` AS `patient_name`, `d`.`name` AS `department_name`, `a`.`queue_number`, `a`.`status`
+FROM `appointments` `a`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `departments` `d` ON `d`.`department_id` = `a`.`department_id`
+WHERE `a`.`status` = \'confirmed\'
+ORDER BY `a`.`queue_number` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`appointment_id`, `u`.`full_name` AS `patient_name`, `d`.`name` AS `department_name`, `a`.`queue_number`, `a`.`status`
+FROM `appointments` `a`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `departments` `d` ON `d`.`department_id` = `a`.`department_id`
+WHERE `a`.`status` = \'confirmed\'
+ORDER BY `a`.`queue_number` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`appointment_id`, `u`.`full_name` AS `patient_name`, `d`.`name` AS `department_name`, `a`.`queue_number`, `a`.`status`
+FROM `appointments` `a`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `departments` `d` ON `d`.`department_id` = `a`.`department_id`
+WHERE `a`.`status` = :a.status:
+ORDER BY `a`.`queue_number` ASC', [...], false)
+ 4 APPPATH\Controllers\Admin\antrian.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Antrian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Antrian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-11 06:53:20 --> [Caused by] mysqli_sql_exception: Unknown column 'a.queue_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `a`.`appointment_id`, `u`.`full_name` AS `patient_name`, `d`.`name` AS `department_name`, `a`.`queue_number`, `a`.`status`
+FROM `appointments` `a`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `departments` `d` ON `d`.`department_id` = `a`.`department_id`
+WHERE `a`.`status` = \'confirmed\'
+ORDER BY `a`.`queue_number` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`appointment_id`, `u`.`full_name` AS `patient_name`, `d`.`name` AS `department_name`, `a`.`queue_number`, `a`.`status`
+FROM `appointments` `a`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `departments` `d` ON `d`.`department_id` = `a`.`department_id`
+WHERE `a`.`status` = \'confirmed\'
+ORDER BY `a`.`queue_number` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`appointment_id`, `u`.`full_name` AS `patient_name`, `d`.`name` AS `department_name`, `a`.`queue_number`, `a`.`status`
+FROM `appointments` `a`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `departments` `d` ON `d`.`department_id` = `a`.`department_id`
+WHERE `a`.`status` = \'confirmed\'
+ORDER BY `a`.`queue_number` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`appointment_id`, `u`.`full_name` AS `patient_name`, `d`.`name` AS `department_name`, `a`.`queue_number`, `a`.`status`
+FROM `appointments` `a`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `departments` `d` ON `d`.`department_id` = `a`.`department_id`
+WHERE `a`.`status` = :a.status:
+ORDER BY `a`.`queue_number` ASC', [...], false)
+ 5 APPPATH\Controllers\Admin\antrian.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Antrian->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Antrian))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 06:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 06:55:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/admin/main.php"
+[Method: GET, Route: admin/antrian]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/admin/main.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/admin/main', [], true)
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/antrian', [], true)
+ 4 APPPATH\Controllers\Admin\antrian.php(32): view('admin/antrian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Antrian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Antrian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 06:55:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/admin/main.php"
+[Method: GET, Route: admin/antrian]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/admin/main.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/admin/main', [], true)
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/antrian', [], true)
+ 4 APPPATH\Controllers\Admin\antrian.php(32): view('admin/antrian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Antrian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Antrian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 06:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 07:00:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/hasil_pemeriksaan.php"
+[Method: GET, Route: admin/hasil-pemeriksaan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/hasil_pemeriksaan.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/hasil_pemeriksaan', [], true)
+ 3 APPPATH\Controllers\Admin\HasilPemeriksaan.php(36): view('admin/hasil_pemeriksaan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\HasilPemeriksaan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HasilPemeriksaan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 07:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 07:01:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+[Method: GET, Route: admin/hasil-pemeriksaan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/hasil_pemeriksaan', [], true)
+ 4 APPPATH\Controllers\Admin\HasilPemeriksaan.php(36): view('admin/hasil_pemeriksaan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\HasilPemeriksaan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HasilPemeriksaan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 07:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-11 07:06:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/laporan_pembayaran.php"
+[Method: GET, Route: admin/laporan-pembayaran]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/laporan_pembayaran.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/laporan_pembayaran', [], true)
+ 3 APPPATH\Controllers\Admin\Laporan.php(33): view('admin/laporan_pembayaran', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Laporan->pembayaran()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 07:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-11 07:15:07 --> mysqli_sql_exception: Unknown column 'd.specialization' in 'field list' in C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `mp`.`pi...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mp`.`pi...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mp`.`pi...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mp`.`pi...', Array, false)
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit\app\Controllers\Admin\Laporan.php(58): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Admin\Laporan->pengambilanObat()
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Laporan))
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2026-02-11 07:15:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'd.specialization' in 'field list'
+[Method: GET, Route: admin/laporan/pengambilan-obat]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mp`.`pickup_id`, `mp`.`pickup_date`, `u`.`full_name` AS `pasien`, `d`.`specialization`, `a`.`schedule_date`
+FROM `medicine_pickups` `mp`
+JOIN `prescriptions` `pr` ON `pr`.`prescription_id` = `mp`.`prescription_id`
+JOIN `examinations` `e` ON `e`.`exam_id` = `pr`.`exam_id`
+JOIN `appointments` `a` ON `a`.`appointment_id` = `e`.`appointment_id`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `doctors` `doc` ON `doc`.`doctor_id` = `e`.`doctor_id`
+JOIN `departments` `d` ON `d`.`department_id` = `doc`.`department_id`
+ORDER BY `mp`.`pickup_date` DESC', [], false)
+ 2 APPPATH\Controllers\Admin\Laporan.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Laporan->pengambilanObat()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Laporan))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-11 07:15:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'd.specialization' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mp`.`pickup_id`, `mp`.`pickup_date`, `u`.`full_name` AS `pasien`, `d`.`specialization`, `a`.`schedule_date`
+FROM `medicine_pickups` `mp`
+JOIN `prescriptions` `pr` ON `pr`.`prescription_id` = `mp`.`prescription_id`
+JOIN `examinations` `e` ON `e`.`exam_id` = `pr`.`exam_id`
+JOIN `appointments` `a` ON `a`.`appointment_id` = `e`.`appointment_id`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `doctors` `doc` ON `doc`.`doctor_id` = `e`.`doctor_id`
+JOIN `departments` `d` ON `d`.`department_id` = `doc`.`department_id`
+ORDER BY `mp`.`pickup_date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mp`.`pickup_id`, `mp`.`pickup_date`, `u`.`full_name` AS `pasien`, `d`.`specialization`, `a`.`schedule_date`
+FROM `medicine_pickups` `mp`
+JOIN `prescriptions` `pr` ON `pr`.`prescription_id` = `mp`.`prescription_id`
+JOIN `examinations` `e` ON `e`.`exam_id` = `pr`.`exam_id`
+JOIN `appointments` `a` ON `a`.`appointment_id` = `e`.`appointment_id`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `doctors` `doc` ON `doc`.`doctor_id` = `e`.`doctor_id`
+JOIN `departments` `d` ON `d`.`department_id` = `doc`.`department_id`
+ORDER BY `mp`.`pickup_date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mp`.`pickup_id`, `mp`.`pickup_date`, `u`.`full_name` AS `pasien`, `d`.`specialization`, `a`.`schedule_date`
+FROM `medicine_pickups` `mp`
+JOIN `prescriptions` `pr` ON `pr`.`prescription_id` = `mp`.`prescription_id`
+JOIN `examinations` `e` ON `e`.`exam_id` = `pr`.`exam_id`
+JOIN `appointments` `a` ON `a`.`appointment_id` = `e`.`appointment_id`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `doctors` `doc` ON `doc`.`doctor_id` = `e`.`doctor_id`
+JOIN `departments` `d` ON `d`.`department_id` = `doc`.`department_id`
+ORDER BY `mp`.`pickup_date` DESC', [], false)
+ 4 APPPATH\Controllers\Admin\Laporan.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Laporan->pengambilanObat()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Laporan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-11 07:15:07 --> [Caused by] mysqli_sql_exception: Unknown column 'd.specialization' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `mp`.`pickup_id`, `mp`.`pickup_date`, `u`.`full_name` AS `pasien`, `d`.`specialization`, `a`.`schedule_date`
+FROM `medicine_pickups` `mp`
+JOIN `prescriptions` `pr` ON `pr`.`prescription_id` = `mp`.`prescription_id`
+JOIN `examinations` `e` ON `e`.`exam_id` = `pr`.`exam_id`
+JOIN `appointments` `a` ON `a`.`appointment_id` = `e`.`appointment_id`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `doctors` `doc` ON `doc`.`doctor_id` = `e`.`doctor_id`
+JOIN `departments` `d` ON `d`.`department_id` = `doc`.`department_id`
+ORDER BY `mp`.`pickup_date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mp`.`pickup_id`, `mp`.`pickup_date`, `u`.`full_name` AS `pasien`, `d`.`specialization`, `a`.`schedule_date`
+FROM `medicine_pickups` `mp`
+JOIN `prescriptions` `pr` ON `pr`.`prescription_id` = `mp`.`prescription_id`
+JOIN `examinations` `e` ON `e`.`exam_id` = `pr`.`exam_id`
+JOIN `appointments` `a` ON `a`.`appointment_id` = `e`.`appointment_id`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `doctors` `doc` ON `doc`.`doctor_id` = `e`.`doctor_id`
+JOIN `departments` `d` ON `d`.`department_id` = `doc`.`department_id`
+ORDER BY `mp`.`pickup_date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mp`.`pickup_id`, `mp`.`pickup_date`, `u`.`full_name` AS `pasien`, `d`.`specialization`, `a`.`schedule_date`
+FROM `medicine_pickups` `mp`
+JOIN `prescriptions` `pr` ON `pr`.`prescription_id` = `mp`.`prescription_id`
+JOIN `examinations` `e` ON `e`.`exam_id` = `pr`.`exam_id`
+JOIN `appointments` `a` ON `a`.`appointment_id` = `e`.`appointment_id`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `doctors` `doc` ON `doc`.`doctor_id` = `e`.`doctor_id`
+JOIN `departments` `d` ON `d`.`department_id` = `doc`.`department_id`
+ORDER BY `mp`.`pickup_date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mp`.`pickup_id`, `mp`.`pickup_date`, `u`.`full_name` AS `pasien`, `d`.`specialization`, `a`.`schedule_date`
+FROM `medicine_pickups` `mp`
+JOIN `prescriptions` `pr` ON `pr`.`prescription_id` = `mp`.`prescription_id`
+JOIN `examinations` `e` ON `e`.`exam_id` = `pr`.`exam_id`
+JOIN `appointments` `a` ON `a`.`appointment_id` = `e`.`appointment_id`
+JOIN `patients` `p` ON `p`.`patient_id` = `a`.`patient_id`
+JOIN `users` `u` ON `u`.`user_id` = `p`.`user_id`
+JOIN `doctors` `doc` ON `doc`.`doctor_id` = `e`.`doctor_id`
+JOIN `departments` `d` ON `d`.`department_id` = `doc`.`department_id`
+ORDER BY `mp`.`pickup_date` DESC', [], false)
+ 5 APPPATH\Controllers\Admin\Laporan.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Laporan->pengambilanObat()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-11 07:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-11 07:22:56 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`rs`.`appointments`, CONSTRAINT `appointments_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `patients` (`patient_id`)) in C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `us...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\BaseModel.php(1123): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit\app\Controllers\Admin\Users.php(201): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Admin\Users->delete('15')
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+DEBUG - 2026-02-11 07:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:27:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-11 07:47:29 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`rs`.`appointments`, CONSTRAINT `appointments_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `patients` (`patient_id`)) in C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php(327): mysqli->query('DELETE FROM `us...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\BaseModel.php(1123): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit\app\Controllers\Admin\Users.php(201): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Admin\Users->delete('15')
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+DEBUG - 2026-02-11 07:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 07:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-11 08:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

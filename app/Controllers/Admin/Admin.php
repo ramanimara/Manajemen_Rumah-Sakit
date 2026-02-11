@@ -17,6 +17,19 @@ class Admin extends BaseController
     {
         $today = date('Y-m-d');
 
+        // Data Grafik Poliklinik Terpopuler (Bar Chart)
+        $poliStats = $this->db->table('departments d')
+            ->select('d.name, COUNT(a.appointment_id) as total')
+            ->join('appointments a', 'a.department_id = d.department_id', 'left')
+            ->groupBy('d.name')
+            ->get()->getResultArray();
+
+        // Data Jenis Pembayaran (Pie Chart)
+        $payStats = $this->db->table('payments')
+            ->select('payment_method, COUNT(*) as total')
+            ->groupBy('payment_method')
+            ->get()->getResultArray();
+
         $data = [
             'title'   => 'Dashboard Admin',
             'stats'   => [
@@ -25,15 +38,18 @@ class Admin extends BaseController
                 'pembayaran'  => $this->db->table('payments')->where('payment_status', 'paid')->countAllResults(),
                 'obat'        => $this->db->table('medicine_pickups')->countAllResults(),
             ],
-            // Mengambil 5 aktivitas pemeriksaan terakhir
-            'riwayat' => $this->db->table('examinations')
-                ->select('users.full_name as pasien, departments.name as poli, diagnosis, exam_date')
-                ->join('appointments', 'appointments.appointment_id = examinations.appointment_id')
-                ->join('patients', 'patients.patient_id = appointments.patient_id')
-                ->join('users', 'users.user_id = patients.user_id')
-                ->join('departments', 'departments.department_id = appointments.department_id')
-                ->orderBy('exam_date', 'DESC')
-                ->limit(5)
+            'chart_poli' => $poliStats,
+            'chart_pay'  => $payStats,
+            'riwayat'    => $this->db->table('examinations e')
+                ->select('u.full_name as pasien, d.name as poli, dr_u.full_name as dokter, e.diagnosis, e.exam_date')
+                ->join('appointments a', 'a.appointment_id = e.appointment_id')
+                ->join('patients p', 'p.patient_id = a.patient_id')
+                ->join('users u', 'u.user_id = p.user_id')
+                ->join('departments d', 'd.department_id = a.department_id')
+                ->join('doctors dr', 'dr.doctor_id = e.doctor_id')
+                ->join('users dr_u', 'dr_u.user_id = dr.user_id')
+                ->orderBy('e.exam_date', 'DESC')
+                ->limit(2)
                 ->get()->getResultArray()
         ];
 

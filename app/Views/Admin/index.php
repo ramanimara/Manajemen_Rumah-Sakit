@@ -8,18 +8,21 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .sidebar { width: 250px; height: 100vh; position: fixed; background: #2c3e50; color: white; padding-top: 20px; }
+        .sidebar { width: 250px; height: 100vh; position: fixed; background: #2c3e50; color: white; padding-top: 20px; z-index: 1000; }
         .sidebar .nav-link { color: #bdc3c7; padding: 12px 20px; transition: 0.3s; border-left: 4px solid transparent; }
         .sidebar .nav-link:hover, .sidebar .nav-link.active { background: #34495e; color: white; border-left: 4px solid #3498db; }
         .content { margin-left: 250px; padding: 30px; }
-        .card-stat { border: none; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card-stat { border: none; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card-stat:hover { transform: translateY(-5px); }
+        .table thead { background-color: #f8f9fa; }
+        .badge-poli { font-size: 0.8rem; padding: 5px 10px; border-radius: 20px; }
     </style>
 </head>
 <body>
 
 <div class="sidebar">
     <div class="text-center mb-4">
-        <h4><i class="fas fa-clinic-medical"></i> RS ADMIN</h4>
+        <h4><i class="fas fa-hospital-alt"></i> RS ADMIN</h4>
         <hr class="mx-3 border-secondary">
     </div>
     <nav class="nav flex-column">
@@ -36,31 +39,34 @@
 </div>
 
 <div class="content">
-    <h2 class="mb-4">Dashboard Utama</h2>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Dashboard Utama</h2>
+        <span class="badge bg-primary px-3 py-2"><i class="far fa-calendar-alt"></i> <?= date('d M Y') ?></span>
+    </div>
 
-    <div class="row mb-4">
+    <div class="row mb-4 g-3">
         <div class="col-md-3">
-            <div class="card card-stat p-3 bg-white">
-                <small class="text-muted">Pasien Hari Ini</small>
-                <h2 class="text-primary"><?= $stats['pasien'] ?></h2>
+            <div class="card card-stat p-3 bg-white border-start border-primary border-4">
+                <small class="text-muted fw-bold">Pasien Hari Ini</small>
+                <h2 class="text-primary mb-0"><?= number_format($stats['pasien']) ?></h2>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card card-stat p-3 bg-white">
-                <small class="text-muted">Total Pemeriksaan</small>
-                <h2 class="text-success"><?= $stats['pemeriksaan'] ?></h2>
+            <div class="card card-stat p-3 bg-white border-start border-success border-4">
+                <small class="text-muted fw-bold">Total Pemeriksaan</small>
+                <h2 class="text-success mb-0"><?= number_format($stats['pemeriksaan']) ?></h2>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card card-stat p-3 bg-white">
-                <small class="text-muted">Pembayaran Lunas</small>
-                <h2 class="text-warning"><?= $stats['pembayaran'] ?></h2>
+            <div class="card card-stat p-3 bg-white border-start border-warning border-4">
+                <small class="text-muted fw-bold">Pembayaran Lunas</small>
+                <h2 class="text-warning mb-0"><?= number_format($stats['pembayaran']) ?></h2>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card card-stat p-3 bg-white">
-                <small class="text-muted">Obat Diserahkan</small>
-                <h2 class="text-info"><?= $stats['obat'] ?></h2>
+            <div class="card card-stat p-3 bg-white border-start border-info border-4">
+                <small class="text-muted fw-bold">Obat Diserahkan</small>
+                <h2 class="text-info mb-0"><?= number_format($stats['obat']) ?></h2>
             </div>
         </div>
     </div>
@@ -68,47 +74,83 @@
     <div class="row">
         <div class="col-md-8">
             <div class="card card-stat p-4 bg-white mb-4">
-                <h5>Aktivitas Pemeriksaan Terakhir</h5>
-                <table class="table table-hover mt-3">
-                    <thead>
-                        <tr>
-                            <th>Pasien</th><th>Poli</th><th>Diagnosa</th><th>Waktu</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach($riwayat as $r): ?>
-                        <tr>
-                            <td><?= $r['pasien'] ?></td>
-                            <td><span class="badge bg-secondary"><?= $r['poli'] ?></span></td>
-                            <td><?= $r['diagnosis'] ?></td>
-                            <td><?= date('H:i', strtotime($r['exam_date'])) ?></td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="mb-0">Aktivitas Pemeriksaan Terakhir</h5>
+                    <a href="#" class="btn btn-sm btn-light text-primary">Lihat Semua</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Pasien</th>
+                                <th>Poliklinik</th>
+                                <th>Diagnosa</th>
+                                <th>Waktu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if(!empty($riwayat)): ?>
+                                <?php foreach($riwayat as $r): ?>
+                                <tr>
+                                    <td class="fw-bold"><?= $r['pasien'] ?></td>
+                                    <td><span class="badge bg-secondary badge-poli"><?= $r['poli'] ?></span></td>
+                                    <td><?= $r['diagnosis'] ?></td>
+                                    <td class="text-muted"><i class="far fa-clock"></i> <?= date('H:i', strtotime($r['exam_date'])) ?></td>
+                                </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr><td colspan="4" class="text-center text-muted">Belum ada aktivitas hari ini</td></tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
+
         <div class="col-md-4">
             <div class="card card-stat p-4 bg-white">
-                <h5>Statistik Kunjungan</h5>
-                <canvas id="myChart"></canvas>
+                <h5 class="mb-4">Statistik Kunjungan</h5>
+                <div style="position: relative; height:300px;">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <hr>
+                <div class="small text-muted">
+                    <i class="fas fa-info-circle"></i> Data berdasarkan jumlah pendaftaran per Poliklinik.
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <script>
+    // Integrasi Chart.js
     const ctx = document.getElementById('myChart');
     new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['Umum', 'Gigi', 'Anak'],
+            labels: ['Umum', 'Gigi', 'Anak', 'THT'],
             datasets: [{
-                data: [12, 19, 3],
-                backgroundColor: ['#3498db', '#2ecc71', '#e74c3c']
+                data: [45, 25, 20, 10], // Data dummy, nanti bisa dikirim dari Controller
+                backgroundColor: ['#3498db', '#2ecc71', '#e74c3c', '#f1c40f'],
+                hoverOffset: 10,
+                borderWidth: 0
             }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        usePointStyle: true
+                    }
+                }
+            },
+            cutout: '70%'
         }
     });
 </script>
+
 </body>
 </html>

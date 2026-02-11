@@ -3,64 +3,43 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
-use App\Models\Registration\AppointmentModel;
-use Config\Database;
 
 class Kedatangan extends BaseController
 {
     public function index()
     {
-        $db = Database::connect();
+        $db = \Config\Database::connect();
 
-        $appointments = $db->table('appointments')
+        $data['title'] = 'Kedatangan Pasien';
+
+        $data['patients'] = $db->table('appointments a')
             ->select('
-                appointments.appointment_id,
-                appointments.schedule_date,
-                users.full_name AS patient_name,
-                departments.name AS department_name
+                a.appointment_id,
+                u.full_name AS patient_name,
+                d.name AS department_name,
+                a.status,
+                a.created_at
             ')
-            ->join('patients', 'patients.patient_id = appointments.patient_id')
-            ->join('users', 'users.user_id = patients.user_id')
-            ->join('departments', 'departments.department_id = appointments.department_id')
-            ->where('appointments.status', 'waiting')
-            ->orderBy('appointments.created_at', 'ASC')
+            ->join('patients p', 'p.patient_id = a.patient_id')
+            ->join('users u', 'u.user_id = p.user_id')
+            ->join('departments d', 'd.department_id = a.department_id')
+            ->whereIn('a.status', ['waiting', 'confirmed'])
+            ->orderBy('a.created_at', 'ASC')
             ->get()
             ->getResultArray();
 
-        return view('admin/kedatangan', [
-            'title' => 'Kedatangan Pasien',
-            'appointments' => $appointments
-        ]);
+        return view('admin/kedatangan', $data);
     }
 
-    public function konfirmasi($appointmentId)
+    public function confirm($id)
     {
-        $db = Database::connect();
-        $db->transStart();
+        $db = \Config\Database::connect();
 
-        // update appointment
         $db->table('appointments')
-            ->where('appointment_id', $appointmentId)
+            ->where('appointment_id', $id)
             ->update(['status' => 'confirmed']);
 
-        // generate nomor antrian
-        $lastQueue = $db->table('queues')
-            ->selectMax('queue_number')
-            ->get()
-            ->getRow();
-
-        $queueNumber = ($lastQueue->queue_number ?? 0) + 1;
-
-        $db->table('queues')->insert([
-            'appointment_id' => $appointmentId,
-            'queue_number'   => $queueNumber,
-            'status'         => 'waiting'
-        ]);
-
-        $db->transComplete();
-
-        return redirect()
-            ->to('admin/kedatangan')
-            ->with('success', 'Kedatangan pasien berhasil dikonfirmasi');
+        return redirect()->to('/admin/kedatangan')
+            ->with('success', 'Pasien berhasil dikonfirmasi datang');
     }
 }

@@ -18,15 +18,28 @@
                 <i class="fas fa-hospital-user text-blue-500 text-2xl"></i>
                 <h1 class="text-xl font-bold tracking-tight">RS <span class="text-blue-500">Rawat Jalan</span></h1>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-6">
+
+                <!-- Info Dokter -->
                 <div class="text-right">
                     <p class="text-sm font-semibold"><?= session()->get('full_name') ?></p>
                     <p class="text-xs text-gray-400">Spesialis Dokter</p>
                 </div>
+
+                <!-- Icon Dokter -->
                 <div class="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center border-2 border-gray-600">
                     <i class="fas fa-user-md text-white"></i>
                 </div>
+
+                <!-- Logout Button -->
+                <a href="<?= base_url('logout') ?>"
+                    onclick="return confirm('Yakin ingin logout?')"
+                    class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow-lg shadow-red-900/30">
+                    <i class="fas fa-sign-out-alt mr-2"></i> Logout
+                </a>
+
             </div>
+
         </nav>
 
         <main class="flex-grow p-6 lg:p-10">
