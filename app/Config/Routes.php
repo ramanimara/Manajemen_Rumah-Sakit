@@ -19,6 +19,14 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('users/edit/(:num)', 'Admin\Users::edit/$1');
     $routes->post('users/update/(:num)', 'Admin\Users::update/$1');
     $routes->get('users/delete/(:num)', 'Admin\Users::delete/$1');
+    $routes->get('/', 'Admin\Admin::index');
+    $routes->get('dashboard', 'Admin\Admin::index');
+    $routes->get('pendaftaran', 'Admin\Admin::pendaftaran');
+    $routes->get('users', 'Admin\Admin::users');
+    $routes->get('pendaftaran/edit/(:num)', 'Admin\Admin::edit_pendaftaran/$1');
+    $routes->post('pendaftaran/update/(:num)', 'Admin\Admin::update_pendaftaran/$1');
+    $routes->get('kedatangan', 'Admin\Kedatangan::index');
+    $routes->get('kedatangan/konfirmasi/(:num)', 'Admin\Kedatangan::konfirmasi/$1');
 });
 
 $routes->group('apoteker', ['filter' => 'auth'], function ($routes) {

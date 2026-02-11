@@ -1,138 +1,114 @@
-<?= $this->extend('Admin/Layout/main') ?> <?= $this->section('content') ?>
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h3 class="fw-bold"><i class="bi bi-grid-1x2-fill me-2 text-primary"></i>Dashboard Utama</h3>
-    <div class="text-muted">
-        <i class="bi bi-calendar3 me-1"></i> <?= date('l, d F Y') ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title><?= $title ?></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .sidebar { width: 250px; height: 100vh; position: fixed; background: #2c3e50; color: white; padding-top: 20px; }
+        .sidebar .nav-link { color: #bdc3c7; padding: 12px 20px; transition: 0.3s; border-left: 4px solid transparent; }
+        .sidebar .nav-link:hover, .sidebar .nav-link.active { background: #34495e; color: white; border-left: 4px solid #3498db; }
+        .content { margin-left: 250px; padding: 30px; }
+        .card-stat { border: none; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="text-center mb-4">
+        <h4><i class="fas fa-clinic-medical"></i> RS ADMIN</h4>
+        <hr class="mx-3 border-secondary">
     </div>
+    <nav class="nav flex-column">
+        <a class="nav-link active" href="<?= base_url('admin') ?>"><i class="fas fa-home me-2"></i> Dashboard</a>
+        <a class="nav-link" href="<?= base_url('admin/pendaftaran') ?>"><i class="fas fa-user-plus me-2"></i> Pendaftaran</a>
+        <a class="nav-link" href="#"><i class="fas fa-walking me-2"></i> Kedatangan</a>
+        <a class="nav-link" href="#"><i class="fas fa-users me-2"></i> Antrian</a>
+        <a class="nav-link" href="#"><i class="fas fa-stethoscope me-2"></i> Pemeriksaan</a>
+        <a class="nav-link" href="#"><i class="fas fa-money-bill-wave me-2"></i> Pembayaran</a>
+        <a class="nav-link" href="#"><i class="fas fa-pills me-2"></i> Pengambilan Obat</a>
+        <a class="nav-link" href="<?= base_url('admin/users') ?>"><i class="fas fa-users-cog me-2"></i> Manajemen User</a>
+        <a class="nav-link text-danger mt-4" href="<?= base_url('logout') ?>"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>
+    </nav>
 </div>
 
-<div class="row g-4 mb-4">
-    <div class="col-md-3">
-        <div class="card border-0 shadow-sm p-3 border-start border-primary border-4">
-            <div class="d-flex align-items-center">
-                <div class="bg-primary bg-opacity-10 p-3 rounded-3 me-3">
-                    <i class="bi bi-people-fill text-primary fs-3"></i>
-                </div>
-                <div>
-                    <small class="text-muted fw-bold text-uppercase" style="font-size: 11px;">Pasien Hari Ini</small>
-                    <h3 class="mb-0 fw-bold"><?= $stats['pasien'] ?></h3>
-                </div>
+<div class="content">
+    <h2 class="mb-4">Dashboard Utama</h2>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card card-stat p-3 bg-white">
+                <small class="text-muted">Pasien Hari Ini</small>
+                <h2 class="text-primary"><?= $stats['pasien'] ?></h2>
             </div>
         </div>
-    </div>
-    
-    <div class="col-md-3">
-        <div class="card border-0 shadow-sm p-3 border-start border-success border-4">
-            <div class="d-flex align-items-center">
-                <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                    <i class="bi bi-stethoscope text-success fs-3"></i>
-                </div>
-                <div>
-                    <small class="text-muted fw-bold text-uppercase" style="font-size: 11px;">Pemeriksaan</small>
-                    <h3 class="mb-0 fw-bold"><?= $stats['pemeriksaan'] ?></h3>
-                </div>
+        <div class="col-md-3">
+            <div class="card card-stat p-3 bg-white">
+                <small class="text-muted">Total Pemeriksaan</small>
+                <h2 class="text-success"><?= $stats['pemeriksaan'] ?></h2>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-stat p-3 bg-white">
+                <small class="text-muted">Pembayaran Lunas</small>
+                <h2 class="text-warning"><?= $stats['pembayaran'] ?></h2>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-stat p-3 bg-white">
+                <small class="text-muted">Obat Diserahkan</small>
+                <h2 class="text-info"><?= $stats['obat'] ?></h2>
             </div>
         </div>
     </div>
 
-    <div class="col-md-3">
-        <div class="card border-0 shadow-sm p-3 border-start border-warning border-4">
-            <div class="d-flex align-items-center">
-                <div class="bg-warning bg-opacity-10 p-3 rounded-3 me-3">
-                    <i class="bi bi-cash-stack text-warning fs-3"></i>
-                </div>
-                <div>
-                    <small class="text-muted fw-bold text-uppercase" style="font-size: 11px;">Pembayaran Lunas</small>
-                    <h3 class="mb-0 fw-bold"><?= $stats['pembayaran'] ?></h3>
-                </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card card-stat p-4 bg-white mb-4">
+                <h5>Aktivitas Pemeriksaan Terakhir</h5>
+                <table class="table table-hover mt-3">
+                    <thead>
+                        <tr>
+                            <th>Pasien</th><th>Poli</th><th>Diagnosa</th><th>Waktu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($riwayat as $r): ?>
+                        <tr>
+                            <td><?= $r['pasien'] ?></td>
+                            <td><span class="badge bg-secondary"><?= $r['poli'] ?></span></td>
+                            <td><?= $r['diagnosis'] ?></td>
+                            <td><?= date('H:i', strtotime($r['exam_date'])) ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="card border-0 shadow-sm p-3 border-start border-info border-4">
-            <div class="d-flex align-items-center">
-                <div class="bg-info bg-opacity-10 p-3 rounded-3 me-3">
-                    <i class="bi bi-capsule text-info fs-3"></i>
-                </div>
-                <div>
-                    <small class="text-muted fw-bold text-uppercase" style="font-size: 11px;">Obat Diserahkan</small>
-                    <h3 class="mb-0 fw-bold"><?= $stats['obat'] ?></h3>
-                </div>
+        <div class="col-md-4">
+            <div class="card card-stat p-4 bg-white">
+                <h5>Statistik Kunjungan</h5>
+                <canvas id="myChart"></canvas>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-8 mb-4">
-        <div class="card border-0 shadow-sm p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h6 class="fw-bold mb-0">TREN KUNJUNGAN PASIEN</h6>
-                <span class="badge bg-light text-primary">7 Hari Terakhir</span>
-            </div>
-            <canvas id="chartKunjungan" height="150"></canvas>
-        </div>
-    </div>
-
-    <div class="col-md-4 mb-4">
-        <div class="card border-0 shadow-sm p-4 h-100">
-            <h6 class="fw-bold mb-4">AKTIVITAS TERBARU</h6>
-            <div class="list-group list-group-flush">
-                <?php if(!empty($riwayat)): ?>
-                    <?php foreach($riwayat as $r): ?>
-                    <div class="list-group-item px-0 border-0 mb-3">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div>
-                                <h6 class="mb-1 fw-bold small"><?= $r['pasien'] ?></h6>
-                                <p class="text-muted mb-0" style="font-size: 11px;">
-                                    <i class="bi bi-tag-fill me-1"></i> <?= $r['poli'] ?> - <?= $r['diagnosis'] ?>
-                                </p>
-                            </div>
-                            <span class="badge bg-blue-100 text-blue-800" style="font-size: 10px;">
-                                <?= date('H:i', strtotime($r['exam_date'])) ?>
-                            </span>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <div class="text-center py-4">
-                        <p class="text-muted small">Belum ada aktivitas hari ini.</p>
-                    </div>
-                <?php endif; ?>
-            </div>
-            <a href="#" class="btn btn-light btn-sm w-100 mt-auto">Lihat Semua Riwayat</a>
         </div>
     </div>
 </div>
 
 <script>
-    const ctx = document.getElementById('chartKunjungan').getContext('2d');
+    const ctx = document.getElementById('myChart');
     new Chart(ctx, {
-        type: 'line',
+        type: 'doughnut',
         data: {
-            labels: ['Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab', 'Min'],
+            labels: ['Umum', 'Gigi', 'Anak'],
             datasets: [{
-                label: 'Jumlah Pasien',
-                data: [15, 25, 20, 35, 30, 45, 12],
-                borderColor: '#0d6efd',
-                backgroundColor: 'rgba(13, 110, 253, 0.05)',
-                fill: true,
-                tension: 0.4,
-                pointRadius: 4,
-                pointBackgroundColor: '#0d6efd'
+                data: [12, 19, 3],
+                backgroundColor: ['#3498db', '#2ecc71', '#e74c3c']
             }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: { display: false }
-            },
-            scales: {
-                y: { beginAtZero: true, grid: { display: false } },
-                x: { grid: { display: false } }
-            }
         }
     });
 </script>
-<?= $this->endSection() ?>
+</body>
+</html>
