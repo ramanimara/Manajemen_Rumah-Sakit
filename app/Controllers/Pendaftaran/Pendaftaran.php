@@ -20,66 +20,75 @@ class Pendaftaran extends BaseController
     /* =======================
        DASHBOARD PENDAFTARAN
        ======================= */
-    public function index()
-    {
-        $today = date('Y-m-d');
+   public function index()
+{
+    $today = date('Y-m-d');
 
-        // Total pendaftaran terkonfirmasi hari ini
-        $totalConfirmed = $this->appointmentModel
-            ->where('status', 'confirmed')
-            ->where('schedule_date', $today)
-            ->countAllResults();
+    /* ======================
+       SUMMARY TOTAL
+    ====================== */
 
-        // Total menunggu verifikasi
-        $totalWaiting = $this->appointmentModel
-            ->where('status', 'waiting')
-            ->where('schedule_date', $today)
-            ->countAllResults();
+    $totalPendaftaran = $this->appointmentModel
+        ->where('schedule_date', $today)
+        ->countAllResults();
 
-        // Total antrian hari ini
-        $totalQueue = $this->queueModel
-            ->join('appointments', 'appointments.appointment_id = queues.appointment_id')
-            ->where('appointments.schedule_date', $today)
-            ->countAllResults();
+    $totalWaiting = $this->appointmentModel
+        ->where('status', 'waiting')
+        ->where('schedule_date', $today)
+        ->countAllResults();
 
-        // Pendaftaran terbaru
-        $pendaftaranTerbaru = $this->appointmentModel
-            ->select('
-                appointments.appointment_id,
-                appointments.status,
-                users.full_name,
-                departments.name AS department_name
-            ')
-            ->join('patients', 'patients.patient_id = appointments.patient_id')
-            ->join('users', 'users.user_id = patients.user_id')
-            ->join('departments', 'departments.department_id = appointments.department_id')
-            ->orderBy('appointments.created_at', 'DESC')
-            ->findAll(5);
+    $totalQueue = $this->queueModel
+        ->join('appointments', 'appointments.appointment_id = queues.appointment_id')
+        ->where('appointments.schedule_date', $today)
+        ->countAllResults();
 
-        // Antrian terbaru
-        $antrianTerbaru = $this->queueModel
-            ->select('
-                queues.queue_number,
-                queues.status,
-                users.full_name,
-                departments.name AS department_name
-            ')
-            ->join('appointments', 'appointments.appointment_id = queues.appointment_id')
-            ->join('patients', 'patients.patient_id = appointments.patient_id')
-            ->join('users', 'users.user_id = patients.user_id')
-            ->join('departments', 'departments.department_id = appointments.department_id')
-            ->orderBy('queues.queue_id', 'DESC')
-            ->findAll(5);
+    /* ======================
+       5 PENDAFTARAN TERBARU
+    ====================== */
 
-        return view('pendaftaran/dashboard', [
-            'title'              => 'Dashboard Pendaftaran',
-            'totalConfirmed'     => $totalConfirmed,
-            'totalWaiting'       => $totalWaiting,
-            'totalQueue'         => $totalQueue,
-            'pendaftaranTerbaru' => $pendaftaranTerbaru,
-            'antrianTerbaru'     => $antrianTerbaru
-        ]);
-    }
+    $pendaftaranTerbaru = $this->appointmentModel
+        ->select('
+            appointments.status,
+            users.full_name,
+            departments.name AS department_name
+        ')
+        ->join('patients', 'patients.patient_id = appointments.patient_id')
+        ->join('users', 'users.user_id = patients.user_id')
+        ->join('departments', 'departments.department_id = appointments.department_id')
+        ->orderBy('appointments.appointment_id', 'DESC')
+        ->limit(5)
+        ->findAll();
+
+    /* ======================
+       5 ANTRIAN TERBARU
+    ====================== */
+
+    $antrianTerbaru = $this->queueModel
+    ->select('
+        queues.queue_number,
+        queues.status,
+        users.full_name,
+        departments.name AS department_name
+    ')
+    ->join('appointments', 'appointments.appointment_id = queues.appointment_id')
+    ->join('patients', 'patients.patient_id = appointments.patient_id')
+    ->join('users', 'users.user_id = patients.user_id')
+    ->join('departments', 'departments.department_id = appointments.department_id')
+    ->where('appointments.schedule_date', $today) // WAJIB
+    ->orderBy('queues.queue_number', 'DESC') // sama seperti dashboard
+    ->limit(5)
+    ->findAll();
+
+
+    return view('pendaftaran/dashboard', [
+        'title'               => 'Dashboard Pendaftaran',
+        'totalPendaftaran'    => $totalPendaftaran,
+        'totalWaiting'        => $totalWaiting,
+        'totalQueue'          => $totalQueue,
+        'pendaftaranTerbaru'  => $pendaftaranTerbaru,
+        'antrianTerbaru'      => $antrianTerbaru,
+    ]);
+}
 
     /* =======================
        LIST PENDAFTARAN PASIEN
@@ -97,7 +106,7 @@ class Pendaftaran extends BaseController
             ->join('patients', 'patients.patient_id = appointments.patient_id')
             ->join('users', 'users.user_id = patients.user_id')
             ->join('departments', 'departments.department_id = appointments.department_id')
-            ->orderBy('appointments.created_at', 'DESC')
+            ->orderBy('appointments.appointment_id', 'DESC')
             ->findAll();
 
         return view('pendaftaran/pendaftaran_pasien', [
@@ -111,13 +120,14 @@ class Pendaftaran extends BaseController
        ======================= */
     public function konfirmasi($appointment_id)
     {
-        // Ambil appointment + relasi
+        // Ambil data appointment
         $appointment = $this->appointmentModel
             ->select('
                 appointments.appointment_id,
+                appointments.status,
+                appointments.schedule_date,
                 users.full_name,
-                departments.name AS department_name,
-                appointments.schedule_date
+                departments.name AS department_name
             ')
             ->join('patients', 'patients.patient_id = appointments.patient_id')
             ->join('users', 'users.user_id = patients.user_id')
@@ -129,40 +139,58 @@ class Pendaftaran extends BaseController
             return redirect()->back()->with('error', 'Data tidak ditemukan');
         }
 
-        // Update status appointment
+        // Cegah konfirmasi ulang
+        if ($appointment['status'] === 'confirmed') {
+            return redirect()->back()->with('warning', 'Pasien sudah dikonfirmasi');
+        }
+
+        /* =======================
+           UPDATE STATUS APPOINTMENT
+           ======================= */
         $this->appointmentModel->update($appointment_id, [
             'status' => 'confirmed'
         ]);
 
-        // Hitung nomor antrian hari ini
+        /* =======================
+           HITUNG NOMOR ANTRIAN
+           ======================= */
         $today = date('Y-m-d');
 
         $lastQueue = $this->queueModel
+            ->select('queues.queue_number')
             ->join('appointments', 'appointments.appointment_id = queues.appointment_id')
             ->where('appointments.schedule_date', $today)
-            ->orderBy('queue_number', 'DESC')
+            ->orderBy('queues.queue_number', 'DESC')
             ->first();
 
-        $queueNumber = $lastQueue ? $lastQueue['queue_number'] + 1 : 1;
+        $queueNumber = $lastQueue ? ((int)$lastQueue['queue_number'] + 1) : 1;
 
-        // Insert queue
+        /* =======================
+           INSERT KE TABEL QUEUES
+           ======================= */
         $this->queueModel->insert([
             'appointment_id' => $appointment_id,
             'queue_number'   => $queueNumber,
             'status'         => 'waiting'
         ]);
 
-        // Simpan data tiket ke session
+        /* =======================
+           SIMPAN TIKET KE SESSION
+           ======================= */
         session()->setFlashdata('queue_ticket', [
-            'queue_number'   => $queueNumber,
-            'full_name'      => $appointment['full_name'],
-            'department'     => $appointment['department_name'],
-            'schedule_date'  => $appointment['schedule_date']
+            'queue_number'  => str_pad($queueNumber, 3, '0', STR_PAD_LEFT),
+            'full_name'     => $appointment['full_name'],
+            'department'    => $appointment['department_name'],
+            'schedule_date' => $appointment['schedule_date']
         ]);
 
-        return redirect()->to('/pendaftaran/pasien');
+        return redirect()->to('/pendaftaran/pasien')
+            ->with('success', 'Pasien berhasil dikonfirmasi & masuk antrian');
     }
 
+    /* =======================
+       LIST ANTRIAN HARI INI
+       ======================= */
     public function antrian()
     {
         $today = date('Y-m-d');
@@ -182,8 +210,8 @@ class Pendaftaran extends BaseController
             ->orderBy('queues.queue_number', 'ASC')
             ->findAll();
 
-        return view('Pendaftaran/antrian', [
-            'title' => 'Antrian Pasien',
+        return view('pendaftaran/antrian', [
+            'title'       => 'Antrian Pasien',
             'dataAntrian' => $dataAntrian
         ]);
     }

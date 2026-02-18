@@ -9,7 +9,7 @@
         <div class="card text-bg-primary">
             <div class="card-body">
                 <h6>Total Pendaftaran Hari Ini</h6>
-                <h3><?= $totalConfirmed ?></h3>
+                <h3><?= $totalPendaftaran ?></h3>
             </div>
         </div>
     </div>
@@ -32,6 +32,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- PENDAFTARAN ONLINE TERBARU -->
 <div class="card mb-4">
@@ -91,13 +92,17 @@
                 <?php if (!empty($antrianTerbaru)): ?>
                     <?php foreach ($antrianTerbaru as $queue): ?>
                         <tr>
-                            <td><?= $queue['queue_number'] ?></td>
+                            <td><?= str_pad($queue['queue_number'], 3, '0', STR_PAD_LEFT) ?></td>
                             <td><?= esc($queue['full_name']) ?></td>
                             <td><?= esc($queue['department_name']) ?></td>
                             <td>
-                                <span class="badge bg-info">
+                               <span class="badge bg-<?= 
+                                    $queue['status'] === 'waiting' ? 'warning' : 
+                                    ($queue['status'] === 'done' ? 'success' : 'secondary') 
+                                    ?>">
                                     <?= ucfirst($queue['status']) ?>
                                 </span>
+
                             </td>
                         </tr>
                     <?php endforeach ?>

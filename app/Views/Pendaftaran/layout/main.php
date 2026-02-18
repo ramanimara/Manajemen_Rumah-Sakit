@@ -13,6 +13,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/css/pendaftaran/sidebar.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/pendaftaran/dashboard.css') ?>">
+
+
 
 
 
@@ -25,7 +28,7 @@
 
         <!-- SIDEBAR -->
         <div class="sidebar">
-            <h4>RSUD Sehat</h4>
+            <h4>RS Rawat Jalan</h4>
 
             <ul class="nav flex-column">
                 <li class="nav-item">

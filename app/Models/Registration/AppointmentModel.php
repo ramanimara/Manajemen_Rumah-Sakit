@@ -9,6 +9,8 @@ class AppointmentModel extends Model
     protected $table = 'appointments';
     protected $primaryKey = 'appointment_id';
 
+    protected $useTimestamps = false; // ⬅️ TAMBAHKAN INI
+
     protected $allowedFields = [
         'patient_id',
         'schedule_date',
@@ -17,3 +19,4 @@ class AppointmentModel extends Model
         'status'
     ];
 }
+
