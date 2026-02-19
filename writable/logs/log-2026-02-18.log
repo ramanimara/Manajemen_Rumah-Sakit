@@ -1,0 +1,1520 @@
+DEBUG - 2026-02-18 02:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 02:32:59 --> ErrorException: Undefined array key "queue_code"
+[Method: GET, Route: pendaftaran/pasien]
+in APPPATH\Views\Pendaftaran\pendaftaran_pasien.php on line 95.
+ 1 APPPATH\Views\Pendaftaran\pendaftaran_pasien.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "queue_code"', 'C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\app\\Views\\Pendaftaran\\pendaftaran_pasien.php', 95)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\app\\Views\\Pendaftaran\\pendaftaran_pasien.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('pendaftaran/pendaftaran_pasien', [], true)
+ 5 APPPATH\Controllers\Pendaftaran\Pendaftaran.php(113): view('pendaftaran/pendaftaran_pasien', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pendaftaran\Pendaftaran->pasien()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran\Pendaftaran))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 02:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 02:41:30 --> ErrorException: Undefined array key "queue_code"
+[Method: GET, Route: pendaftaran/pasien]
+in APPPATH\Views\Pendaftaran\pendaftaran_pasien.php on line 95.
+ 1 APPPATH\Views\Pendaftaran\pendaftaran_pasien.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "queue_code"', 'C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\app\\Views\\Pendaftaran\\pendaftaran_pasien.php', 95)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\app\\Views\\Pendaftaran\\pendaftaran_pasien.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('pendaftaran/pendaftaran_pasien', [], true)
+ 5 APPPATH\Controllers\Pendaftaran\Pendaftaran.php(113): view('pendaftaran/pendaftaran_pasien', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pendaftaran\Pendaftaran->pasien()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran\Pendaftaran))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 02:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:42:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 02:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 04:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-18 04:59:45 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'rs', 3306, '', 0)
+#1 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `appoint...', Array, false)
+#4 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\app\Controllers\Pendaftaran\Pendaftaran.php(110): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Pendaftaran\Pendaftaran->pasien()
+#8 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran\Pendaftaran))
+#9 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `appoint...', Array, false)
+#3 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\app\Controllers\Pendaftaran\Pendaftaran.php(110): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Pendaftaran\Pendaftaran->pasien()
+#7 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran\Pendaftaran))
+#8 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2026-02-18 04:59:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: pendaftaran/pasien]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `appointments`.`appointment_id`, `appointments`.`status`, `appointments`.`schedule_date`, `users`.`full_name`, `departments`.`name` AS `department_name`
+FROM `appointments`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `departments` ON `departments`.`department_id` = `appointments`.`department_id`
+ORDER BY `appointments`.`appointment_id` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Pendaftaran\Pendaftaran.php(110): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pendaftaran\Pendaftaran->pasien()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran\Pendaftaran))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 04:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 04:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 04:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-18 04:59:57 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'rs', 3306, '', 0)
+#1 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\app\Controllers\Auth.php(31): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Auth->loginProcess()
+#8 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#3 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\app\Controllers\Auth.php(31): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Auth->loginProcess()
+#7 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2026-02-18 04:59:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login/auth]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `roles`.`role_name`
+FROM `users`
+JOIN `roles` ON `roles`.`role_id` = `users`.`role_id`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(31): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->loginProcess()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 05:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 05:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:46:00 --> Error: Class "App\Models\DoctorScheduleModel" not found
+[Method: GET, Route: admin/jadwal]
+in APPPATH\Controllers\Admin\Jadwal.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\Jadwal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:46:45 --> Error: Class "App\Models\Doctor\DoctorScheduleModel" not found
+[Method: GET, Route: admin/jadwal]
+in APPPATH\Controllers\Admin\Jadwal.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\Jadwal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:46:46 --> Error: Class "App\Models\Doctor\DoctorScheduleModel" not found
+[Method: GET, Route: admin/jadwal]
+in APPPATH\Controllers\Admin\Jadwal.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\Jadwal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:46:47 --> Error: Class "App\Models\Doctor\DoctorScheduleModel" not found
+[Method: GET, Route: admin/jadwal]
+in APPPATH\Controllers\Admin\Jadwal.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\Jadwal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:49:01 --> Error: Class "App\Models\Doctor\DoctorScheduleModel" not found
+[Method: GET, Route: admin/jadwal]
+in APPPATH\Controllers\Admin\Jadwal.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\Jadwal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:49:02 --> Error: Class "App\Models\Doctor\DoctorScheduleModel" not found
+[Method: GET, Route: admin/jadwal]
+in APPPATH\Controllers\Admin\Jadwal.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\Jadwal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:49:04 --> Error: Class "App\Models\Doctor\DoctorScheduleModel" not found
+[Method: GET, Route: admin/jadwal]
+in APPPATH\Controllers\Admin\Jadwal.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\Jadwal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:51:01 --> Error: Class "App\Models\Doctor\DoctorScheduleModel" not found
+[Method: GET, Route: admin/jadwal]
+in APPPATH\Controllers\Admin\Jadwal.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\Jadwal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:51:02 --> Error: Class "App\Models\Doctor\DoctorScheduleModel" not found
+[Method: GET, Route: admin/jadwal]
+in APPPATH\Controllers\Admin\Jadwal.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\Jadwal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:51:05 --> Error: Class "App\Models\Doctor\DoctorScheduleModel" not found
+[Method: GET, Route: admin/jadwal]
+in APPPATH\Controllers\Admin\Jadwal.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin\Jadwal->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:51:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/jadwal/index.php"
+[Method: GET, Route: admin/jadwal]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/jadwal/index.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/jadwal/index', [], true)
+ 3 APPPATH\Controllers\Admin\Jadwal.php(33): view('admin/jadwal/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Jadwal->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Jadwal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 06:52:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/jadwal/create.php"
+[Method: GET, Route: admin/jadwal/create]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/jadwal/create.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('admin/jadwal/create', [], true)
+ 3 APPPATH\Controllers\Admin\Jadwal.php(48): view('admin/jadwal/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Jadwal->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Jadwal))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 06:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:52:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:52:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 06:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-02-18 07:06:59 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: pasien/booking]
+in APPPATH\Views\Pasien\booking.php on line 195.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('pasien/booking', [], true)
+ 4 APPPATH\Controllers\Pasien\Pasien.php(63): view('pasien/booking', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pasien\Pasien->booking()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien\Pasien))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 07:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-18 07:25:15 --> mysqli_sql_exception: Column 'schedule_date' cannot be null in C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ap...', 0)
+#1 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ap...')
+#2 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ap...')
+#3 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ap...', Array, false)
+#4 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\app\Controllers\Pasien\Pasien.php(99): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Pasien\Pasien->store()
+#6 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien\Pasien))
+#7 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2026-02-18 07:25:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'schedule_date' cannot be null
+[Method: POST, Route: pasien/booking/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (:patient_id:, :schedule_date:, :department_id:, :doctor_id:, :status:)', [...], false)
+ 2 APPPATH\Controllers\Pasien\Pasien.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pasien\Pasien->store()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien\Pasien))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-18 07:25:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'schedule_date' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (\'2\', NULL, \'1\', \'3\', \'waiting\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (\'2\', NULL, \'1\', \'3\', \'waiting\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (:patient_id:, :schedule_date:, :department_id:, :doctor_id:, :status:)', [...], false)
+ 4 APPPATH\Controllers\Pasien\Pasien.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pasien\Pasien->store()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien\Pasien))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-18 07:25:15 --> [Caused by] mysqli_sql_exception: Column 'schedule_date' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (\'2\', NULL, \'1\', \'3\', \'waiting\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (\'2\', NULL, \'1\', \'3\', \'waiting\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (\'2\', NULL, \'1\', \'3\', \'waiting\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (:patient_id:, :schedule_date:, :department_id:, :doctor_id:, :status:)', [...], false)
+ 5 APPPATH\Controllers\Pasien\Pasien.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pasien\Pasien->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien\Pasien))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 07:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-18 07:25:34 --> mysqli_sql_exception: Column 'schedule_date' cannot be null in C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ap...', 0)
+#1 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ap...')
+#2 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ap...')
+#3 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ap...', Array, false)
+#4 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\app\Controllers\Pasien\Pasien.php(99): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(933): App\Controllers\Pasien\Pasien->store()
+#6 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien\Pasien))
+#7 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\UASSS\Manajemen_Rumah-Sakit\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2026-02-18 07:25:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'schedule_date' cannot be null
+[Method: POST, Route: pasien/booking/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (:patient_id:, :schedule_date:, :department_id:, :doctor_id:, :status:)', [...], false)
+ 2 APPPATH\Controllers\Pasien\Pasien.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pasien\Pasien->store()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien\Pasien))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-18 07:25:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'schedule_date' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (\'2\', NULL, \'1\', \'3\', \'waiting\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (\'2\', NULL, \'1\', \'3\', \'waiting\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (:patient_id:, :schedule_date:, :department_id:, :doctor_id:, :status:)', [...], false)
+ 4 APPPATH\Controllers\Pasien\Pasien.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pasien\Pasien->store()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien\Pasien))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+CRITICAL - 2026-02-18 07:25:34 --> [Caused by] mysqli_sql_exception: Column 'schedule_date' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (\'2\', NULL, \'1\', \'3\', \'waiting\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (\'2\', NULL, \'1\', \'3\', \'waiting\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (\'2\', NULL, \'1\', \'3\', \'waiting\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `appointments` (`patient_id`, `schedule_date`, `department_id`, `doctor_id`, `status`) VALUES (:patient_id:, :schedule_date:, :department_id:, :doctor_id:, :status:)', [...], false)
+ 5 APPPATH\Controllers\Pasien\Pasien.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pasien\Pasien->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pasien\Pasien))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UASSS\\Manajemen_Rumah-Sakit\\public\\index.php')
+DEBUG - 2026-02-18 07:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 07:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:40:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 08:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 22:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:14:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-18 23:16:52 --> mysqli_sql_exception: Unknown column 'appointment_date' in 'where clause' in C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\app\Controllers\Pendaftaran\Pendaftaran.php(36): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(933): App\Controllers\Pendaftaran\Pendaftaran->index()
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran\Pendaftaran))
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2026-02-18 23:16:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'appointment_date' in 'where clause'
+[Method: GET, Route: pendaftaran]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `appointments`
+WHERE `appointment_date` = :appointment_date:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Pendaftaran\Pendaftaran.php(36): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pendaftaran\Pendaftaran->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran\Pendaftaran))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+CRITICAL - 2026-02-18 23:16:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'appointment_date' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `appointments`
+WHERE `appointment_date` = \'2026-02-18\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `appointments`
+WHERE `appointment_date` = \'2026-02-18\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `appointments`
+WHERE `appointment_date` = :appointment_date:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Pendaftaran\Pendaftaran.php(36): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pendaftaran\Pendaftaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran\Pendaftaran))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+CRITICAL - 2026-02-18 23:16:52 --> [Caused by] mysqli_sql_exception: Unknown column 'appointment_date' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `appointments`
+WHERE `appointment_date` = \'2026-02-18\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `appointments`
+WHERE `appointment_date` = \'2026-02-18\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `appointments`
+WHERE `appointment_date` = \'2026-02-18\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `appointments`
+WHERE `appointment_date` = :appointment_date:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Pendaftaran\Pendaftaran.php(36): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pendaftaran\Pendaftaran->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftaran\Pendaftaran))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+DEBUG - 2026-02-18 23:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:17:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-02-18 23:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-18 23:37:39 --> mysqli_sql_exception: Not unique table/alias: 'medicine_pickups' in C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `prescri...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescri...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescri...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescri...', Array, false)
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\app\Controllers\Apoteker\Apoteker.php(60): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2026-02-18 23:37:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'medicine_pickups'
+[Method: GET, Route: apoteker]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 2 APPPATH\Controllers\Apoteker\Apoteker.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+CRITICAL - 2026-02-18 23:37:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'medicine_pickups'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 4 APPPATH\Controllers\Apoteker\Apoteker.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+CRITICAL - 2026-02-18 23:37:39 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'medicine_pickups'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 5 APPPATH\Controllers\Apoteker\Apoteker.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+DEBUG - 2026-02-18 23:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-18 23:37:42 --> mysqli_sql_exception: Not unique table/alias: 'medicine_pickups' in C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `prescri...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescri...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescri...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescri...', Array, false)
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\app\Controllers\Apoteker\Apoteker.php(60): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2026-02-18 23:37:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'medicine_pickups'
+[Method: GET, Route: apoteker]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 2 APPPATH\Controllers\Apoteker\Apoteker.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+CRITICAL - 2026-02-18 23:37:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'medicine_pickups'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 4 APPPATH\Controllers\Apoteker\Apoteker.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+CRITICAL - 2026-02-18 23:37:42 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'medicine_pickups'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `medicine_pickups`.`pickup_id` IS NULL
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 5 APPPATH\Controllers\Apoteker\Apoteker.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+DEBUG - 2026-02-18 23:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-18 23:47:13 --> mysqli_sql_exception: Not unique table/alias: 'medicine_pickups' in C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `prescri...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescri...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescri...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescri...', Array, false)
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\app\Controllers\Apoteker\Apoteker.php(59): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2026-02-18 23:47:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'medicine_pickups'
+[Method: GET, Route: apoteker]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 2 APPPATH\Controllers\Apoteker\Apoteker.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+CRITICAL - 2026-02-18 23:47:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'medicine_pickups'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 4 APPPATH\Controllers\Apoteker\Apoteker.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+CRITICAL - 2026-02-18 23:47:14 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'medicine_pickups'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 5 APPPATH\Controllers\Apoteker\Apoteker.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+DEBUG - 2026-02-18 23:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-02-18 23:47:19 --> mysqli_sql_exception: Not unique table/alias: 'medicine_pickups' in C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `prescri...', 0)
+#1 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescri...')
+#2 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescri...')
+#3 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescri...', Array, false)
+#4 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\app\Controllers\Apoteker\Apoteker.php(59): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+#6 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+#7 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\Manajemen_Rumah-Sakit-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2026-02-18 23:47:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'medicine_pickups'
+[Method: GET, Route: apoteker]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 2 APPPATH\Controllers\Apoteker\Apoteker.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+CRITICAL - 2026-02-18 23:47:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'medicine_pickups'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 4 APPPATH\Controllers\Apoteker\Apoteker.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+CRITICAL - 2026-02-18 23:47:19 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'medicine_pickups'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = \'paid\'
+AND `payments`.`payment_status` = \'paid\'
+AND `medicine_pickups`.`pickup_id` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `prescriptions`.`prescription_id`, `users`.`full_name` as `patient_name`, `examinations`.`diagnosis`, `medicines`.`name` as `medicine_name`, `payments`.`payment_status`, `medicine_pickups`.`pickup_id`
+FROM `prescriptions`
+JOIN `examinations` ON `examinations`.`exam_id` = `prescriptions`.`exam_id`
+JOIN `appointments` ON `appointments`.`appointment_id` = `examinations`.`appointment_id`
+JOIN `patients` ON `patients`.`patient_id` = `appointments`.`patient_id`
+JOIN `users` ON `users`.`user_id` = `patients`.`user_id`
+JOIN `payments` ON `payments`.`appointment_id` = `appointments`.`appointment_id`
+JOIN `prescription_items` ON `prescription_items`.`prescription_id` = `prescriptions`.`prescription_id`
+JOIN `medicines` ON `medicines`.`medicine_id` = `prescription_items`.`medicine_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+LEFT JOIN `medicine_pickups` ON `medicine_pickups`.`prescription_id` = `prescriptions`.`prescription_id`
+WHERE `payments`.`payment_status` = :payments.payment_status:
+AND `payments`.`payment_status` = :payments.payment_status.1:
+AND `medicine_pickups`.`pickup_id` IS NULL', [...], false)
+ 5 APPPATH\Controllers\Apoteker\Apoteker.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Apoteker\Apoteker->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apoteker\Apoteker))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Manajemen_Rumah-Sakit-main\\public\\index.php')
+DEBUG - 2026-02-18 23:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
