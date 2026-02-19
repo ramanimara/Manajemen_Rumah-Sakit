@@ -49,17 +49,24 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->post('users/update/(:num)', 'Admin\Users::update/$1');
     $routes->get('users/delete/(:num)', 'Admin\Users::delete/$1');
     $routes->get('users', 'Admin\Users::index');
+<<<<<<< HEAD
 
     $routes->get('jadwal', 'Admin\Jadwal::index');
     $routes->get('jadwal/create', 'Admin\Jadwal::create');
     $routes->post('jadwal/store', 'Admin\Jadwal::store');
     $routes->delete('jadwal/delete/(:num)', 'Admin\Jadwal::delete/$1');
+=======
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
 });
 
 
 $routes->group('apoteker', ['filter' => 'auth'], function ($routes) {
     $routes->get('/', 'Apoteker\Apoteker::index');
+<<<<<<< HEAD
     $routes->get('detail/(:num)', 'Apoteker\Apoteker::getDetail/$1');
+=======
+    $routes->get('detail/(:num)', 'Apoteker\Apoteker::detail/$1');
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
     $routes->post('pickup/(:num)', 'Apoteker\Apoteker::pickup/$1');
 });
 
@@ -77,6 +84,7 @@ $routes->group('dokter', ['filter' => 'auth'], function ($routes) {
     $routes->post('submitExamination', 'Doctor\DoctorController::submitExamination');
 });
 
+<<<<<<< HEAD
 $routes->group('appointment', function ($routes) {
     $routes->get('getDoctorsByDept/(:num)', 'Pasien\Pasien::getDoctorsByDept/$1');
     $routes->get('getSchedulesByDoctor/(:num)', 'Pasien\Pasien::getSchedulesByDoctor/$1');
@@ -84,28 +92,44 @@ $routes->group('appointment', function ($routes) {
 $routes->group('pasien', ['filter' => 'auth'], function ($routes) {
     $routes->get('/', 'Pasien\Pasien::index');
     $routes->get('dashboard', 'Pasien\Pasien::dashboard');
+=======
+$routes->group('pasien', ['filter' => 'auth'], function ($routes) {
+    $routes->get('/', 'Pasien\Pasien::index');
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
     $routes->get('booking', 'Pasien\Pasien::booking');
     $routes->post('booking/store', 'Pasien\Pasien::store');
     $routes->get('riwayat', 'Pasien\Pasien::riwayat');
     $routes->get('antrian', 'Pasien\Pasien::antrian');
+<<<<<<< HEAD
     $routes->get('detail_pemeriksaan/(:num)', 'Pasien\Pasien::detail_pemeriksaan/$1');
+=======
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
 });
 
 
 $routes->get('register', 'Pasien\Register::index');
 $routes->post('pasien/register/process', 'Pasien\Register::process');
 
+<<<<<<< HEAD
 $routes->group('appointment', function ($routes) {
     $routes->get('getDoctorsByDept/(:num)', 'Pasien::getDoctorsByDept/$1');
     $routes->get('getSchedulesByDoctor/(:num)', 'Pasien::getSchedulesByDoctor/$1');
 });
+=======
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
 
 $routes->group('pendaftaran', function ($routes) {
     $routes->get('/', 'Pendaftaran\Pendaftaran::index');
     $routes->get('pasien', 'Pendaftaran\Pendaftaran::pasien');
     $routes->get('antrian', 'Pendaftaran\Pendaftaran::antrian');
     $routes->get('konfirmasi/(:num)', 'Pendaftaran\Pendaftaran::konfirmasi/$1');
+<<<<<<< HEAD
     $routes->post('pendaftaran/panggil', 'Pendaftaran\Pendaftaran::panggil');
 });
 
 $routes->get('reset-test', 'Auth::resetPasswordTest');
+=======
+});
+
+$routes->get('reset-test', 'Auth::resetPasswordTest');
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909

@@ -126,9 +126,12 @@
             <a href="<?= base_url('admin/users') ?>" class="<?= (uri_string() == 'admin/users') ? 'active' : '' ?>">
                 <i class="bi bi-person-gear"></i> Manajemen User
             </a>
+<<<<<<< HEAD
             <a href="<?= base_url('admin/jadwal') ?>" class="<?= (uri_string() == 'admin/jadwal') ? 'active' : '' ?>">
                 <i class="bi bi-calendar"></i> Jadwal Dokter
             </a>
+=======
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
         </div>
 
         <a href="/logout" class="logout-link" id="btn-logout">

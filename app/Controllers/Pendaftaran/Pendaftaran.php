@@ -215,6 +215,7 @@ class Pendaftaran extends BaseController
             'dataAntrian' => $dataAntrian
         ]);
     }
+<<<<<<< HEAD
 
     public function panggil()
     {
@@ -239,4 +240,6 @@ class Pendaftaran extends BaseController
         return $this->response->setJSON(['status' => 'success']);
     }
 
+=======
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
 }

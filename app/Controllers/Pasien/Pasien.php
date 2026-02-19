@@ -2,9 +2,15 @@
 
 namespace App\Controllers\Pasien;
 
+<<<<<<< HEAD
 use App\Controllers\BaseController;
 
 class Pasien extends BaseController
+=======
+use CodeIgniter\Controller;
+
+class Pasien extends Controller
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
 {
     protected $db;
 
@@ -38,6 +44,7 @@ class Pasien extends BaseController
     public function index()
     {
         if (!session()->get('user_id')) {
+<<<<<<< HEAD
             return redirect()->to('/');
         }
 
@@ -48,6 +55,12 @@ class Pasien extends BaseController
     public function dashboard()
     {
         return $this->index();
+=======
+            return redirect()->to('/login');
+        }
+
+        return view('pasien/dashboard');
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
     }
 
     /* ===============================
@@ -58,7 +71,11 @@ class Pasien extends BaseController
         $patientId = $this->getPatientId();
 
         if (!$patientId) {
+<<<<<<< HEAD
             return redirect()->to('/');
+=======
+            return redirect()->to('/login');
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
         }
 
         $data['departments'] = $this->db
@@ -66,6 +83,7 @@ class Pasien extends BaseController
             ->get()
             ->getResult();
 
+<<<<<<< HEAD
         return view('Pasien/booking', $data);
     }
 
@@ -100,18 +118,44 @@ class Pasien extends BaseController
 
     /* ===============================
      * 2c. SIMPAN BOOKING
+=======
+        return view('pasien/booking', $data);
+    }
+
+    /* ===============================
+     * 2b. SIMPAN BOOKING
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
      * =============================== */
     public function store()
     {
         $patientId = $this->getPatientId();
 
         if (!$patientId) {
+<<<<<<< HEAD
             return redirect()->to('/');
+=======
+            return redirect()->to('/login');
+        }
+
+        $db = \Config\Database::connect();
+
+        $departmentId = $this->request->getPost('department_id');
+
+        // 🔍 Ambil 1 dokter berdasarkan poli
+        $doctor = $db->table('doctors')
+            ->where('department_id', $departmentId)
+            ->get()
+            ->getRow();
+
+        if (!$doctor) {
+            return redirect()->back()->with('error', 'Dokter untuk poli ini belum tersedia.');
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
         }
 
         $data = [
             'patient_id'    => $patientId,
             'schedule_date' => $this->request->getPost('schedule_date'),
+<<<<<<< HEAD
             'department_id' => $this->request->getPost('department_id'),
             'doctor_id'     => $this->request->getPost('doctor_id'),
             'schedule_id'   => $this->request->getPost('schedule_id'),
@@ -124,6 +168,14 @@ class Pasien extends BaseController
         }
 
         $this->db->table('appointments')->insert($data);
+=======
+            'department_id' => $departmentId,
+            'doctor_id'     => $doctor->doctor_id,
+            'status'        => 'waiting'
+        ];
+
+        $db->table('appointments')->insert($data);
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
 
         return redirect()->to('/pasien/riwayat')->with('success', 'Booking berhasil dibuat!');
     }
@@ -137,7 +189,11 @@ class Pasien extends BaseController
         $patientId = $this->getPatientId();
 
         if (!$patientId) {
+<<<<<<< HEAD
             return redirect()->to('/');
+=======
+            return redirect()->to('/login');
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
         }
 
         $data['appointments'] = $this->db->query("
@@ -152,7 +208,11 @@ class Pasien extends BaseController
             ORDER BY a.schedule_date DESC
         ", [$patientId])->getResult();
 
+<<<<<<< HEAD
         return view('Pasien/riwayat', $data);
+=======
+        return view('pasien/riwayat', $data);
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
     }
 
     /* ===============================
@@ -163,7 +223,11 @@ class Pasien extends BaseController
         $patientId = $this->getPatientId();
 
         if (!$patientId) {
+<<<<<<< HEAD
             return redirect()->to('/');
+=======
+            return redirect()->to('/login');
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
         }
 
         $data['queues'] = $this->db->query("
@@ -171,8 +235,12 @@ class Pasien extends BaseController
                 q.queue_number,
                 q.status,
                 a.schedule_date,
+<<<<<<< HEAD
                 d.name AS department,
                 a.appointment_id
+=======
+                d.name AS department
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
             FROM queues q
             JOIN appointments a ON a.appointment_id = q.appointment_id
             JOIN departments d ON d.department_id = a.department_id
@@ -181,7 +249,11 @@ class Pasien extends BaseController
             ORDER BY q.queue_id DESC
         ", [$patientId])->getResult();
 
+<<<<<<< HEAD
         return view('Pasien/antrian', $data);
+=======
+        return view('pasien/antrian', $data);
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
     }
 
     /* ===============================
@@ -192,7 +264,11 @@ class Pasien extends BaseController
         $patientId = $this->getPatientId();
 
         if (!$patientId) {
+<<<<<<< HEAD
             return redirect()->to('/');
+=======
+            return redirect()->to('/login');
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
         }
 
         // pemeriksaan
@@ -206,7 +282,11 @@ class Pasien extends BaseController
         if ($data['pemeriksaan']) {
             $data['resep'] = $this->db->query("
                 SELECT 
+<<<<<<< HEAD
                     m.name,
+=======
+                    m.name AS nama_obat,
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
                     pi.dosage,
                     pi.quantity,
                     pi.instructions
@@ -226,6 +306,12 @@ class Pasien extends BaseController
             ->get()
             ->getRow();
 
+<<<<<<< HEAD
         return view('Pasien/detail_pemeriksaan', $data);
     }
 }
+=======
+        return view('pasien/detail_pemeriksaan', $data);
+    }
+}
+>>>>>>> 5f0e2f21ec1001ae16fca6cf7295f8c8130e6909
